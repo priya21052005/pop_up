@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="state()">Enter your state</button>
+
+    <script>
+        function state() {
+            let state = prompt("Enter your State")
+            console.log("you Entered " + state);
+
+            if (state === "Punjab" || state === "Haryana" || state === "Chandigarh") {
+                let user = prompt("enter your username")
+                let password = prompt("enter your password")
+
+                console.log("username is " + user)
+                console.log("Password is " + password)
+                if (state === "Punjab" && user === "priya" && password === "verma") {
+                    window.open("https://maps.app.goo.gl/cBFNDzKqbQCgwUT6A");
+                    return;
+                }
+                 else if (state === "Haryana" && user === "priya" && password === "verma") {
+                    window.open("https://maps.app.goo.gl/oKpwfx4BKwu9gxCh7");
+                    return;
+                }
+                 else if (state === "Chandigarh" && user === "priya" && password === "verma") {
+                    window.open("https://maps.app.goo.gl/TjDgxBUbFRkyhHT37");
+                    return;
+                } else {
+                    alert("wrong credentials")
+                }
+            }
+
+            else {
+                alert("Access Denied");
+            }
+        }
+    </script>
+</body>
+
+</html>
